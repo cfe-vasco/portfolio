@@ -55,7 +55,7 @@ window.onscroll = function () {
 // Descargar el Curriculum
 
 function downloadPDF() {
-  var url = 'CV/CV JULY 2022 JUAN ESPIN.pdf';
+  var url = 'CV/CV APRIL 2023 CHRISTOPHER VASCO.pdf';
 
   // Crear enlace temporal con el atributo href apuntando al archivo PDF
   var enlaceTemporal = document.createElement('a');
