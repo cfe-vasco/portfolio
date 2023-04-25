@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('mZyjZHLgQaa3mmWpF')
+    </script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+
+<body>
+    <!-- MEMU ENCABEZADO -->
+    <div class="header-container">
+        <header>
+            <div class="logo">
+                <a href="#">Christopher</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#start" onclick="select()">HOME</a></li>
+                    <li><a href="#about-me" onclick="select()">ABOUT ME</a></li>
+                    <li><a href="#skills" onclick="select()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="select()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="select()">PORTFOLIO</a></li>
+                    <li><a href="#contact" onclick="select()">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="showHideMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="start" class="start">
+        <div class="banner-container">
+            <div class="img-container">
+                <img src="img/foto2Edi.jpg" alt="">
+            </div>
+            <h1>CHRISTOPHER VASCO</h1>
+            <h2>Software Development Technologist</h2>
+            <div class="social">
+                <a href="https://www.facebook.com/christopher.vasco.98"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/crisfer654lml/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/christopher-vasco-010307272/"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/cfe-vasco"><i class="fa-brands fa-github"></i></a>
+                <a href="https://gitlab.com/cfe.vasco"><i class="fa-brands fa-gitlab"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="about-me" class="about-me">
+        <div class="section-content">
+            <h2>About me</h2>
+            <p><span>Hi, I'm Christopher Vasco. </span>and I consider myself a
+                responsible person, disciplined and motivated to exceed my personal and professional expectations. I am
+                passionate about technology and the innovation process in software development, which has led me to
+                become interested in this area. My long-term goal is to collaborate with a company to help it grow while
+                developing my professional career in the field of software development. I believe that my adaptability,
+                quick learning ability and task responsibility, together with my enthusiasm for technology, make me an
+                ideal candidate to work with you.</p>
+
+            <div class="row">
+                <!-- Datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Date of birth</strong>
+                            03-04-2001
+                        </li>
+                        <li>
+                            <strong>Phone</strong>
+                            (+593) 99 966 7453
+                        </li>
+                        <li>
+                            <strong>E-mail</strong>
+                            christopher.2001v@outlook.es,
+                        </li>
+                        <li>
+                            <strong></strong>
+                            vascoc976@gmail.com
+                        </li>
+                        <li>
+                            <strong>Address</strong>
+                            Ecuador, Quito - Cdl. Atahualpa -
+                        </li>
+                        <li>
+                            <strong></strong>
+                            Maximiliano Rodriguez y Quevedo Oe2-737
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>FREELANCER</span>
+                            <span>WEB DEVELOPER</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Intereses personales -->
+                <div class="col">
+                    <h3>Interests</h3>
+                    <p>Aside from my work as a programmer, I enjoy spending free time with my friends either playing
+                        soccer or online video games. At times when they are not available, I usually do crossfit at a
+                        gym or at home. When it's not possible to go out, I make the most of it by reading science
+                        fiction books or short stories, and occasionally practice the guitar. I also like to research
+                        the latest technologies available to develop applications that meet today's needs.</p>
+                    <div class="container-interests">
+                        <div class="interest">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>Games</span>
+                        </div>
+                        <div class="interest">
+                            <i class="fa-solid fa-guitar"></i>
+                            <span>Music</span>
+                        </div>
+                        <div class="interest">
+                            <i class="fa-solid fa-futbol"></i>
+                            <span>Soccer</span>
+                        </div>
+                        <div class="interest">
+                            <i class="fa-solid fa-dumbbell"></i>
+                            <span>Crossfit</span>
+                        </div>
+                        <div class="interest">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <span>Programming</span>
+                        </div>
+                        <div class="interest">
+                            <i class="fa-solid fa-book"></i>
+                            <span>Reading</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button onclick="downloadPDF()">
+                Download CV <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <div class="row">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Technical Skills</h3>
+                    <div class="skill">
+                        <span><i class="fa-brands fa-square-js fa-2xl" style="color: #f5f910;"></i> JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span><i class="fa-brands fa-html5 fa-2xl" style="color: #ed5f12;"></i> <i
+                                class="fa-brands fa-css3-alt fa-2xl" style="color: #2d73eb;"></i> HTML & CSS</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>89%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span><i class="fa-solid fa-t fa-2xl" style="color: #4e85e4;"></i><i
+                                class="fa-solid fa-s fa-2xl" style="color: #4e85e4;"></i> TypeScript</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span><i class="fa-solid fa-d fa-2xl" style="color: #4e85e4;"></i> Dart</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span><i class="fa-brands fa-php fa-2xl" style="color: #658fd7;"></i> PHP</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>50%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span><i class="fa-solid fa-c fa-2xl" style="color: #1c67e9;"></i><i
+                                class="fa-solid fa-hashtag fa-2xl" style="color: #1c67e9;"></i> C#</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span><i class="fa-brands fa-angular fa-2xl" style="color: #db0f0f;"></i> Angular</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span><i class="fa-solid fa-f fa-2xl" style="color: #0054e6;"></i> Flutter</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span><i class="fa-brands fa-git-alt fa-2xl" style="color: #f93b0b;"></i> Git</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span><i class="fa-brands fa-react fa-2xl" style="color: #4185fb;"></i> React</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>55%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span><i class="fa-solid fa-database fa-2xl" style="color: #4d8eff;"></i> PostgreSQL</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span><i class="fa-solid fa-fire fa-2xl" style="color: #ee651b;"></i> Firebase</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span><i class="fa-brands fa-figma fa-2xl" style="color: #f96767;"></i> Figma</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proffesional Skills -->
+                <div class="col">
+                    <h3>Proffesional Skills</h3>
+                    <div class="skill">
+                        <span>Communication</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Team Work</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creativity</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicación</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Project Management</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Adaptation</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Responsability</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Punctuality</span>
+                        <div class="skill-bar">
+                            <div class="progress">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="section-content">
+            <h2>Curriculum</h2>
+            <div class="row">
+
+                <div class="col left">
+                    <h3>Education</h3>
+                    <div class="item le">
+                        <h4>General Unified Baccalaureate</h4>
+                        <span class="home">Colegio fiscomisional Fe y Alegria "MAUE"</span>
+                        <span class="date">2016-2019</span>
+                        <div class="conectorL">
+                            <div class="circleL">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item le">
+                        <h4>Software Development Technologist</h4>
+                        <span class="home">Instituto Superior Tecnológico de Turismo y Patrimonio Yavirac</span>
+                        <span class="date">2020-2023</span>
+                        <div class="conectorL">
+                            <div class="circleL">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item le">
+                        <h4>Programación para principiantes - Primeros pasos</h4>
+                        <span class="home">Udemy</span>
+                        <span class="date">2020-2021</span>
+                        <div class="conectorL">
+                            <div class="circleL">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item le">
+                        <h4>Legacy - Flutter: Tu guía completa para IOS y Android</h4>
+                        <span class="home">Udemy</span>
+                        <span class="date">2022-2023</span>
+                        <div class="conectorL">
+                            <div class="circleL">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item le">
+                        <h4>Dart: De cero hasta los detalles</h4>
+                        <span class="home">Udemy</span>
+                        <span class="date">2022 - Currently learning</span>
+                        <div class="conectorL">
+                            <div class="circleL">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item le">
+                        <h4>React Hooks & Firebase & Material Design: Fullstack Extremo</h4>
+                        <span class="home">Udemy</span>
+                        <span class="date">Currently learning</span>
+                        <div class="conectorL">
+                            <div class="circleL">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col right">
+                    <h3>Work experience</h3>
+                    <div class="item ri">
+                        <h4>Trainee Programmer</h4>
+                        <span class="home">Manticore Labs</span>
+                        <span class="date">March 2020 - June 2020</span>
+                        <p>Programming with TypeScript, Angular and Node.Js with respect to the tasks given by the
+                            Business Tutor.</p>
+                        <div class="conectorR">
+                            <div class="circleR">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item ri">
+                        <h4>Trainee Programmer</h4>
+                        <span class="home">Linkme S.A.S</span>
+                        <span class="date">September 2021 - December 2021</span>
+                        <p>Programmer in the microservices area using C# and .NETCORE for the management of all
+                            application processes.</p>
+                        <div class="conectorR">
+                            <div class="circleR">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item ri">
+                        <h4>Web content manager</h4>
+                        <span class="home">Linkme S.A.S</span>
+                        <span class="date">August 2022 - November 2022</span>
+                        <p>Upload and edit products from an Excel database to WordPress.</p>
+                        <div class="conectorR">
+                            <div class="circleR">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTAFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="section-content">
+            <h2>PORTFOLIO</h2>
+            <div class="gallery">
+                <div class="project">
+                    <img src="img/peceTech.png">
+                    <div class="overlay">
+                        <h3>PeCe Technology</h3>
+                        <p>E-commerce App</p>
+                        <a href="https://gitlab.com/cfe.vasco/virtual_store_app/-/tree/master/virtual_store_app"><i
+                                class="fa-brands fa-gitlab"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="img/infopelis.png" alt="">
+                    <div class="overlay">
+                        <h3>Info-Pelis</h3>
+                        <p>Information about movies in theaters</p>
+                        <a href="https://github.com/cfe-vasco/react-dart-flutter_Fundaments/tree/master/peliculas_app_flutter"><i
+                                class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="img/importadora.png" alt="">
+                    <div class="overlay">
+                        <h3>Importadora Ferretero Trujillo</h3>
+                        <p>E-commerce App (Private code)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contact" class="contact">
+        <div class="section-content">
+            <h2>CONTACT ME</h2>
+            <div class="row">
+                <!-- Formulario -->
+                <div class="col">
+                    <form id="form">
+                        <input type="text" placeholder="Name" name="name" id="name">
+                        <input type="number" placeholder="Number phone" name="phone" id="phone">
+                        <input type="email" placeholder="E-mail" name="email" id="email">
+                        <input type="text" placeholder="Subject" name="subject" id="subject">
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+
+                        <div id="alert-container"></div>
+
+                        <button id="button" type="submit">
+                            Send Email <i class="fa-solid fa-paper-plane"></i>
+                            <span class="overlay"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <a href="#start" class="up">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="social">
+            <a href="https://www.facebook.com/christopher.vasco.98"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/crisfer654lml/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/christopher-vasco-010307272/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/cfe-vasco"><i class="fa-brands fa-github"></i></a>
+            <a href="https://gitlab.com/cfe.vasco"><i class="fa-brands fa-gitlab"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
