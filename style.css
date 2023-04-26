@@ -936,6 +936,10 @@ footer .social a {
     transition: .3s;
 }
 
+footer .social a:hover {
+    background-color: #1cb698;
+}
+
 footer .up {
     display: block;
     width: 50px;
