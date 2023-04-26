@@ -75,7 +75,7 @@ function downloadPDF() {
 const btn = document.getElementById('button');
 const alertContainer = document.getElementById('alert-container');
 
-btn.addEventListener('click', function(event) {
+btn.addEventListener('click', function (event) {
   event.preventDefault();
 
   // Validar campos
@@ -85,7 +85,13 @@ btn.addEventListener('click', function(event) {
   const subject = document.getElementById('subject');
   const message = document.getElementById('message');
 
-  if (name.value === '' || phone.value === '' || email.value === '' || subject.value === '' || message.value === '') {
+  if (
+    name.value === '' ||
+    phone.value === '' ||
+    email.value === '' ||
+    subject.value === '' ||
+    message.value === ''
+  ) {
     showAlert('danger', 'Please fill in all fields');
     return;
   }
@@ -95,14 +101,25 @@ btn.addEventListener('click', function(event) {
   const serviceID = 'default_service';
   const templateID = 'template_n3qks4q';
 
-  emailjs.sendForm(serviceID, templateID, document.getElementById('form'))
-    .then(() => {
+  emailjs.sendForm(serviceID, templateID, document.getElementById('form')).then(
+    () => {
       btn.innerHTML = 'Send Email <i class="fa-solid fa-paper-plane"></i>';
-      showAlert('success', 'Message sent! Thank you very much for contacting me.');
-    }, (err) => {
+      showAlert(
+        'success',
+        'Message sent! Thank you very much for contacting me.'
+      );
+    },
+    (err) => {
       btn.innerHTML = 'Send Email <i class="fa-solid fa-paper-plane"></i>';
       showAlert('danger', JSON.stringify(err));
-    });
+    }
+  );
+
+  name.value = '';
+  phone.value = '';
+  email.value = '';
+  subject.value = '';
+  message.value = '';
 });
 
 function showAlert(type, message) {
@@ -110,9 +127,7 @@ function showAlert(type, message) {
   alert.className = `alert alert-${type}`;
   alert.appendChild(document.createTextNode(message));
   alertContainer.appendChild(alert);
-  
+
   // Desaparecer la alerta después de 3 segundos
   setTimeout(() => alert.remove(), 3000);
 }
-
-
